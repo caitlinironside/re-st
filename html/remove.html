@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html class="main" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Remove">
+    <meta name="author" content="Caitlin Ironside">
+
+    <title>Remove</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Typekit -->
+    <script src="https://use.typekit.net/qak0pji.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- p5 libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.13/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.13/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.13/addons/p5.sound.min.js"></script>
+    <script src="../js/libraries/matter.js"></script>
+
+    <!-- Custom p5 sketch -->
+    <script src="../js/remove.js"></script>
+    <script src="../js/box.js"></script>
+    <script src="../js/hover_icon.js"></script>
+
+  </head>
+
+  <body class="main non-sketch">
+      
+    <div id="screen-toosmall">
+            <p id="screen-toosmall-type">The interactive nature of this project is not quite suited to small screens or mobile devices. Please move to a larger display to enjoy the full experience!</p>
+        </div>  
+
+    <div id="desktop-content">
+      
+        <div class="container" id="sketch-container">
+
+            <!-- Fixed top navbar -->
+            <nav class="navbar navbar-fixed-top">
+              <div class="container" id="top-nav">
+                 <div id="navbar">
+                  <ul class="nav navbar-nav navbar-left">
+                    <li><a id="logo" href="../index.html">re-</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li id="smallNav1"><a href="about.html">About</a></li>
+                    <li id="smallNav2"><a href="restindex.html">Index</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
+            <!-- Fixed side navbar -->
+            <div class="sideNav">
+                <ul class="verticalNav">
+                    <li onmouseover="change('remove')" onmouseout="change('re-')" class="verticalNav middlenavs currentpage"><a href="remove.html">1</a></li>
+                    <li onmouseover="change('recover')" onmouseout="change('re-')" class="verticalNav middlenavs"><a href="recover.html">2</a></li>
+                    <li onmouseover="change('reflect')" onmouseout="change('re-')" class="verticalNav middlenavs"><a href="reflect.html">3</a></li>
+                    <li onmouseover="change('restore')" onmouseout="change('re-')" class="verticalNav middlenavs"><a href="restore.html">4</a></li>
+                    <li onmouseover="change('recharge')" onmouseout="change('re-')" class="verticalNav"><a href="recharge.html">5</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Body copy -->
+            <div class="row">
+                <div class="col-xs-9 col-xs-offset-3 col-sm-8 col-sm-offset-4 col-md-8 col-md-offset-4 col-lg-7 col-lg-offset-4 vertical-center remove" id="body-text">
+                    <p class="specialcol remove_text padded">
+                        <span class="subHead">To rest is to remove.</span></p>
+                    <p class="p-break specialcol remove_text padded"> Inside our bodies, the central nervous system coordinates the variety of metabolic processes we undertake every day. These processes naturally leave behind waste products, which accumulate in the brain. </p>
+                    <p class="p-break specialcol remove_text padded"> Studies suggest that sleep is the body’s main opportunity to clear away these potentially toxic byproducts, flushing waste from the brain at a much faster rate than when we are awake.
+                    </p>
+                    <p class="p-break specialcol remove_text padded">    
+                        This process of removal during sleep makes room for our brains to keep running the show.
+                    </p>   
+                </div>
+            </div>
+
+            <!-- Fixed navbar -->
+            <nav class="navbar navbar-fixed-bottom">
+                <div class="container" id="bottom-nav">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li id="smallNav3"><a href="readingtips.html">Back</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="smallNav4"><a href="recover.html">Next</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div><!-- End container -->
+      </div>
+        
+        <!-- Bootstrap Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="../js/bootstrap.min.js"></script>
+
+          <!-- Centering body copy -->
+        <script>
+            var wY = $(window).height();
+            var wW = $(window).width();
+			var tY = $(".vertical-center").height();
+            $(".vertical-center").css("margin-top", (wY/2) - (tY/2) + "px");
+            var sY =$(".sideNav").height();
+            $(".sideNav").css("margin-top", (wY/2) - (sY/2) + "px");
+            var tSY = $("#screen-toosmall-type").height();
+              if (wY < 551 && wW > 990) {
+            $("#screen-toosmall-type").css("margin-top", 260 + "px");
+        } else {
+            $("#screen-toosmall-type").css("margin-top", (wY/2) - (tSY/2 +22) + "px");
+        } 
+            
+            $(window).resize(function() {
+				wY = $(window).height();
+                wW = $(window).width();
+				tY = $(".vertical-center").height();
+				$(".vertical-center").css("margin-top", (wY/2) - (tY/2) +"px");
+                sY =$(".sideNav").height();
+                $(".sideNav").css("margin-top", (wY/2) - (sY/2) + "px");
+                tSY = $("#screen-toosmall-type").height();
+            
+                  if (wY < 551 && wW > 990) {
+            $("#screen-toosmall-type").css("margin-top", 260 + "px");
+        } else {
+            $("#screen-toosmall-type").css("margin-top", (wY/2) - (tSY/2 +22) + "px");
+        }
+                
+			});
+            
+            function change(title) {
+                document.getElementById("logo").innerHTML = title;
+                document.getElementById("logo").style.margin = "0px 0px 0px 0px";   
+            }
+		</script>
+
+  </body>
+</html>

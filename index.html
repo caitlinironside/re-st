@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="re-">
+    <meta name="author" content="Caitlin Ironside">
+
+    <title>re-</title>
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Typekit -->
+    <script src="https://use.typekit.net/qak0pji.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>  
+      
+    <!-- p5 libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.13/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.13/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.13/addons/p5.sound.min.js"></script>
+       
+    <script>
+        function blinker() {
+	       $('.blinking').fadeOut(500);
+	       $('.blinking').fadeIn(500);
+        }
+        setInterval(blinker, 1000);
+    </script> 
+      
+  </head>
+
+  <body id="scrollingintro">
+      
+    <div id="screen-toosmall">
+        <p id="screen-toosmall-type">The interactive nature of this project is not quite suited to small screens or mobile devices. Please move to a larger display to enjoy the full experience!</p>
+    </div>    
+
+    <div id="desktop-content"> 
+   
+          <div class="introcontainer">   
+
+            <div id="block1" class="float1"> 
+                <h1>Suppose you were to come upon someone in the woods working feverishly to saw down a tree.</h1>
+               <div id="scrolldiv visible">
+                <h3 id="scrolltext" class="blinking">Scroll</h3>   
+              </div>
+                <img id="arrow" class="visible" src="images/arrow.png" alt="Arrow">
+            </div>
+
+            <div id="block2" class="float2">
+                <h1><span class="quotation new-line">&#8220;What are you doing?&#8221;</span><span class="reply"> you ask.</span></h1>
+            </div> 
+
+            <div id="block3" class="float3" id="extraspace">
+                <h1> <span class="quotation pad-line">&#8220;Can't you see?&#8221;</span><span class="reply space-right"> comes the impatient</span><span class="indent-right"><span class="reply">reply. </span><span class="quotation">&#8220;I'm sawing down this tree.&#8221;</span></span></h1>    
+            </div> 
+
+            <div id="block4" class="float4">
+                <h1> <span class="quotation new-line">&#8220;You look exhausted!&#8221;</span><span class="reply"> you exclaim. </span><span class="quotation new-line">&#8220;How long have you been at it?&#8221;</span></h1>    
+            </div> 
+
+            <div id="block5" class="float5">
+                <h1> <span class="quotation">&#8220;Over five hours,&#8221;</span><span class="reply"> he returns, </span><span class="quotation space-right">&#8220;and</span><br /><span class="quotation"> I'm beat! This is hard work.&#8221;</span></h1>    
+            </div>        
+
+            <div id="block6" class="float6">
+                <h1> <span class="quotation new-line">&#8220;Well, why don't you take a break for a few minutes and sharpen that</span><span class="quotation"> saw?&#8221;</span><span class="reply"> you inquire. </span><span class="quotation">&#8220;I'm sure it would go a lot faster.&#8221;</span></h1>    
+            </div>   
+
+            <div id="block7" class="float7">
+                <h1> <span class="quotation new-line-right">&#8220;I don't have time to sharpen the </span><span class="quotation">saw,&#8221; </span><span class="reply new-line-right"> the man says emphatically.</span><br /><span class="quotation">&#8220;I'm too busy sawing!&#8221;</span></h1>  
+            </div> 
+
+            <div id="block8" class="float8">
+                <h1><span class="smallCaps-intro">Covey, 1989</span></h1>    
+            </div>       
+
+           <div id="block9" class="float9">
+                <div id="intro">
+                    <div id="logolarge">r<span id="kerning">e-</span></div> 
+                    <div id="description">An interactive exploration of rest, inspired by the pace of our lives.</div>
+                    <div class="smallCaps-intro" id="entersite"><a class="blinking" href="html/readingtips.html">Enter Site</a></div>   
+               </div>      
+           </div>
+        </div>
+    </div>    
+          
+    <!-- Bootstrap Scripts & Custom Script --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/home.js"></script>
+      
+        <!-- Centering Body Copy & elements -->       
+    <script>
+        var wY = $(window).height();
+        var wW = $(window).width();
+        var tSY = $("#screen-toosmall-type").height();
+        
+        if (wY < 551 && wW > 991) {
+            $("#screen-toosmall-type").css("margin-top", 260 + "px");
+        } else {
+            $("#screen-toosmall-type").css("margin-top", (wY/2) - (tSY/2 +22) + "px");
+        }
+        
+        var block1W = $("#block1").width();
+        var block2W = $("#block2").width();
+        var block3W = $("#block3").width();
+        var block4W = $("#block4").width();
+        var block5W = $("#block5").width();
+        var block6W = $("#block6").width();
+        var block7W = $("#block7").width();
+        var block8W = $("#block8").width();
+        var introW = $("#intro").width();
+        var descriptionW = $("#description").width();
+        
+        // XS
+        if (wW < 1260 || wY < 700) {
+            $("#block1").css("margin-left", (wW/2) - (block1W/2) + "px");
+            $("#block2").css("margin-left", (wW/2) - (block2W/2) - 25 + "px");  
+            $("#block3").css("margin-left", (wW/2) - (block3W/2) + 65 + "px");
+            $("#block4").css("margin-left", (wW/2) - (block4W/2) - 25 + "px");
+            $("#block5").css("margin-left", (wW/2) - (block5W/2) + 72 + "px");
+            $("#block6").css("margin-left", (wW/2) - (block6W/2) - 25 + "px");
+            $("#block7").css("margin-left", (wW/2) - (block7W/2) + 80 + "px");
+            $("#block8").css("margin-left", (wW/2) - (block7W/2) + 78 + (block7W - block8W) + "px");
+            $("#intro").css("margin-left", (wW/2) - (descriptionW/2) + "px");
+        
+        // SM    
+        } else if (wW >= 1260 && wW < 1500) {
+            $("#block1").css("margin-left", (wW/2) - (block1W/2) + 15 + "px");
+            $("#block2").css("margin-left", (wW/2) - (block2W/2) - 25 + "px");  
+            $("#block3").css("margin-left", (wW/2) - (block3W/2) + 65 + "px");
+            $("#block4").css("margin-left", (wW/2) - (block4W/2) - 25 + "px");
+            $("#block5").css("margin-left", (wW/2) - (block5W/2) + 72 + "px");
+            $("#block6").css("margin-left", (wW/2) - (block6W/2) - 25 + "px");
+            $("#block7").css("margin-left", (wW/2) - (block7W/2) + 80 + "px");
+            $("#block8").css("margin-left", (wW/2) - (block7W/2) + 78 + (block7W - block8W) + "px");
+            $("#intro").css("margin-left", (wW/2) - (descriptionW/2) + "px");
+        
+      //   MD    
+        } else if (wW >= 1500 && wW < 2014) {
+            $("#block1").css("margin-left", (wW/2) - (block1W/2) + 13 + "px");
+            $("#block2").css("margin-left", (wW/2) - (block2W/2) - 55 + "px");  
+            $("#block3").css("margin-left", (wW/2) - (block3W/2) + 75 + "px");
+            $("#block4").css("margin-left", (wW/2) - (block4W/2) - 61 + "px");
+            $("#block5").css("margin-left", (wW/2) - (block5W/2) + 83 + "px");
+            $("#block6").css("margin-left", (wW/2) - (block6W/2) - 105 + "px");
+            $("#block7").css("margin-left", (wW/2) - (block7W/2) + 125 + "px");
+            $("#block8").css("margin-left", (wW/2) - (block7W/2) + 119 + (block7W - block8W) + "px");
+            $("#intro").css("margin-left", (wW/2) - (descriptionW/2) + "px");
+        }
+        
+        // LG
+        else {
+            $("#block1").css("margin-left", (wW/2) - (block1W/2) + 20 + "px");
+            $("#block2").css("margin-left", (wW/2) - (block2W/2) - 55 + "px");  
+            $("#block3").css("margin-left", (wW/2) - (block3W/2) + 75 + "px");
+            $("#block4").css("margin-left", (wW/2) - (block4W/2) - 61 + "px");
+            $("#block5").css("margin-left", (wW/2) - (block5W/2) + 83 + "px");
+            $("#block6").css("margin-left", (wW/2) - (block6W/2) - 65 + "px");
+            $("#block7").css("margin-left", (wW/2) - (block7W/2) + 120 + "px");
+            $("#block8").css("margin-left", (wW/2) - (block7W/2) + 112 + (block7W - block8W) + "px");
+            $("#intro").css("margin-left", (wW/2) - (descriptionW/2) + "px");
+        }
+        
+
+        
+        //add to this!!!!
+        $(window).resize(function() {
+                tSY = $("#screen-toosmall-type").height();
+                $("#screen-toosmall-type").css("margin-top", (wY/2) - (tSY/2 +22) + "px");    
+            if (wY < 551 && wW > 991) {
+            $("#screen-toosmall-type").css("margin-top", 260 + "px");
+        } else {
+            $("#screen-toosmall-type").css("margin-top", (wY/2) - (tSY/2 +22) + "px");
+        }
+        });
+    </script>  
+      
+  </body>
+</html>

@@ -1,0 +1,2042 @@
+/* MEYER RESET
+--------------------------------------------------
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End Meyer Reset
+-------------------------------------------------- */
+
+/* Start Custom CSS Styling
+-------------------------------------------------- */
+
+/* Body, HTML
+-------------------------------------------------- */
+
+body.main, html.main {
+    overflow:hidden;
+    height: 100%;
+}
+
+.non-sketch {
+    background-color: rgb(237,228,223);
+} 
+
+/* Disable Text Selection
+-------------------------------------------------- */
+
+body, html, .nav, a, li, ul, .container, .row, p, p2, p3, p4, p6, .subHead, .emphasis, #scrolltext.visible, .smallCaps, #feature, #block1, #block2, #block3, #block4, #block5, #block6, #block7, #block8, .quotation, #credit, #logolarge, #description, #intro, #smallNav1, #smallNav2, #smallNav3, #smallNav4, #logo, .instructions, .verticalNav, .sidelink, .sidelink a, .sidenav {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+} 
+
+::-moz-selection {
+    background: none;
+    color: none;
+}
+::selection {  
+    background: none;
+    color: none;
+}
+
+/* Global links and rollovers
+-------------------------------------------------- */
+
+a {
+    text-decoration: none;
+    color: rgb(20,12,15);
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: none;    
+}
+
+a:active {
+    color: #ffffff;
+    text-decoration: none;    
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent !important;
+  }
+
+
+.currentpage a {
+    color: #ffffff !important;
+}
+
+.currentpage a:hover, .currentpage a:active {
+    color: rgb(20,12,15) !important;
+}
+
+/* Side Nav
+-------------------------------------------------- */
+@media (max-width:1499px){ 
+ul.verticalNav {
+    list-style-type: none;
+    height: 100%;
+    margin-left: -30px;
+}
+}
+
+@media (min-width:1500px){ 
+ul.verticalNav {
+    list-style-type: none;
+    height: 100%;
+    margin-left: -25px;
+}
+}
+
+li.verticalNav {
+    display: block;
+    text-align: center;
+}
+
+ul.verticalNav_about {
+    list-style-type: none;
+}
+
+li.verticalNav_about {
+    text-align: center;
+}
+
+.middlenavs {
+    padding-bottom: 40px;   
+}
+
+.middlenavs_about {
+    padding-bottom: 40px;   
+}
+
+.sideNav {
+    position: fixed;
+    width: 37px;
+}
+
+.sideNav_about {
+    width: 37px;
+    position: inherit;
+}
+
+@media (max-width:1499px){
+.verticalNav {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.sidelink a {
+font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}   
+} 
+
+@media (min-width:1500px){
+.verticalNav {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.sidelink a {
+font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}   
+} 
+
+
+/* Override Bootstrap collapsible nav feature
+-------------------------------------------------- */
+
+.navbar-collapse.collapse {
+    display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+    float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: -15px !important;
+}
+
+.navbar-nav.navbar-left:first-child {
+     margin-left: -15px !important;
+}
+
+.navbar-right {
+    float: right!important;
+}
+
+.navbar-right li {
+    margin: 0px;
+    padding-left: 30px;   
+}
+
+
+/* Top and Bottom Navs
+-------------------------------------------------- */
+
+.nav {
+    padding-top:30px;
+    padding-bottom:30px;
+    margin: 0px;
+}
+
+.nav>li>a {
+    padding-left: 0px;
+    padding-right: 0px; 
+    padding-top: 0px;
+    padding-bottom: 0px;    
+}
+
+@media (max-width:1499px){
+ #smallNav1, #smallNav2, #smallNav3, #smallNav4 {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+#logo {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    font-size: 2.5rem;
+}  
+} 
+
+@media (min-width:1500px){
+ #smallNav1, #smallNav2, #smallNav3, #smallNav4 {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+#logo {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    font-size: 2.8rem;
+}  
+} 
+
+
+
+/* Bootstrap containers, rows and columns
+-------------------------------------------------- */
+
+body > .container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0px;
+    padding-top:0;
+}
+
+.row {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.row .row {
+    /* Nested rows */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+[class*="col-"] {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+p {
+    display: inline-block;
+}
+
+/* Main Body Typography
+-------------------------------------------------- */
+
+/* XS: 992px-1259px
+----------------------------------------- */
+
+@media (max-width: 1259px) {
+    p, p2, p3 {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    }
+
+    .subHead {
+        font-family: "latienne-pro";
+        font-weight: 500;
+        font-size: 1.5rem;
+    }  
+    
+    .p-break {
+	   margin-top: 20px;
+    }
+    
+    }
+
+/* S: 1260px-1499px (LAPTOP SIZE)
+----------------------------------------- */
+
+@media (min-width: 1260px) and (max-width: 1499px) {
+    p, p2, p3 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    }
+
+    .subHead {
+        font-family: "latienne-pro";
+        font-weight: 500;
+        font-size: 1.6rem;
+    } 
+    
+    .p-break {
+	   margin-top: 20px;
+    }
+    
+}
+
+/* M: 1500px-2013px
+----------------------------------------- */
+
+@media (min-width: 1500px) and (max-width: 2013px) {
+    p, p2, p3 {
+        font-size: 1.75rem;
+        line-height: 2.6rem;
+    }
+
+    .subHead {
+        font-family: "latienne-pro";
+        font-weight: 500;
+        font-size: 2.1rem;
+    }
+    
+    .p-break {
+	   margin-top: 22px;
+    }
+}
+
+/* LG: 2014px-3000px (FULL IMAC SIZE)
+----------------------------------------- */
+
+@media (min-width: 2014px) {
+   p, p2, p3 {
+        font-size: 2.1rem;
+        line-height: 3.2rem;
+    }
+
+    .subHead {
+        font-family: "latienne-pro";
+        font-weight: 500;
+        font-size: 2.4rem;
+    }
+    
+    .p-break {
+	   margin-top: 22px;
+    }
+}
+
+/* Non queried specs
+----------------------------------------- */
+
+p, p2, p3, p4 {
+    font-family: "latienne-pro";
+    font-weight: 400;  
+    margin-bottom: 0;
+    margin-top: 0;
+    color: rgb(20,12,15);    
+}
+
+p4 {
+    font-size: 1rem;
+    line-height: 1.7rem;
+}
+
+p6 {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    text-align: center;
+}
+
+.emphasis {
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*-------- Body Copy Padding --------*/
+
+@media (min-width: 992px) and (max-width: 1259px) {
+    p.padded {
+        padding-left: 50px;
+        margin-right: -16px;
+    }
+}
+
+@media (min-width: 1260px) and (max-width: 1499px) {
+    p.padded {
+        padding-left: 50px;
+        margin-right: -17px;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 2013px) {
+    p.padded {
+        padding-left: 50px;
+        margin-right: -16px;
+    }
+}
+
+@media (min-width: 2014px) {
+    p.padded {
+        
+    }
+}
+
+/* 'Reflect' Sketch
+-------------------------------------------------- */
+
+/* XS: 992px-1259px
+----------------------------------------- */
+
+@media (max-width: 1259px) {
+    .split-text {
+        width: 610px;
+        margin-left: 305px;
+        padding-right: 0px;
+    }
+}
+
+/* S: 1260px-1499px (LAPTOP SIZE)
+----------------------------------------- */
+
+@media (min-width: 1260px) and (max-width: 1499px) {
+    .split-text {
+        width: 715px;
+        margin-left: 465px;
+        /*margin-left: 0%;
+        padding-right: 0px;*/
+    }
+}
+
+/* M: 1500px-2013px
+----------------------------------------- */
+
+@media (min-width: 1500px) and (max-width: 2013px) {
+    .split-text {
+        width: 875px;
+        margin-left: 548px;
+        padding-right: 0px;
+    }
+}
+
+/* LG: 2014px-3000px (FULL IMAC SIZE)
+----------------------------------------- */
+
+@media (min-width: 2014px) {
+    .split-text {
+        width: 1060px;
+        margin-left: 662px;
+        padding-right: 0px;
+    }
+}
+
+.split-paragraph {
+    margin-bottom: 19px;
+}
+
+#paragraph-one {
+    font-weight: 500;
+    /*margin-top: 15.6%;*/
+}
+
+#reflect-text {
+    /*position: absolute;*/
+    /*height: 50%;
+    top: 25%;*/
+}
+
+/* 'Remove' Sketch
+-------------------------------------------------- */
+
+.specialcol {
+    color: rgb(91,55,70) !important;  
+}
+
+/* 'Restore' Sketch
+-------------------------------------------------- */
+
+#fade_box { 
+    transform-origin: top left;
+    display: block;
+}
+
+/* XS: 992px-1259px
+----------------------------------------- */
+
+@media (max-width: 1259px) {
+    #fade_box {
+       padding-top: 40px;
+        padding-left: 40px;
+        margin-right: 32px; 
+    }
+}
+
+/* S: 1260px-1499px (LAPTOP SIZE)
+----------------------------------------- */
+
+@media (min-width: 1260px) and (max-width: 1499px) {
+  #fade_box {
+        padding-top: 40px;
+        padding-left: 40px; 
+        margin-right: 32px; 
+    }
+}
+
+/* M: 1500px-2013px
+----------------------------------------- */
+
+@media (min-width: 1500px) and (max-width: 2013px) {
+  #fade_box {
+        padding-top: 50px;
+        padding-left: 50px;
+        margin-right: 33px;
+    }
+}
+
+/* LG: 2014px-3000px (FULL IMAC SIZE)
+----------------------------------------- */
+
+@media (min-width: 2014px) {
+  #fade_box {
+        padding-top: 50px;
+        padding-left: 50px;
+        /*margin-right: 20px;*/
+        margin-right: -33px;
+    }
+}
+
+/* Scrolling Home Page
+-------------------------------------------------- */
+
+.introcontainer {
+    width:100%;
+    margin:0px auto;
+}
+
+#scrollingintro {
+	margin: 0;
+    background-color: rgb(237,228,223);
+}
+
+.invisible {
+    display:none;
+}
+
+.visible {
+    display:block;
+}
+
+.transparent {
+opacity: 0;
+}
+
+.opaque {
+opacity: 1;
+}
+
+h3 {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgb(20,12,15);
+}
+
+#scrolltext {
+    display: block;
+}
+
+.smallCaps {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgb(20,12,15);
+}
+
+.smallCaps-intro {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgb(20,12,15);
+}
+
+/* Scrolling blocks: horizontal positions
+    ----------------------------------------- */
+
+    #block2 h1, #block4 h1, #block6 h1 {
+        text-align: left;
+    }
+
+    #block3 h1 {
+        text-align: right;
+    }
+
+    #block5 h1 {
+        text-align: right;
+    }
+
+    #block7 h1 {
+        text-align: right;
+    }
+
+    #block8 h1 {
+        text-align: right;
+    }
+
+/* XS: 992px-1259px
+----------------------------------------- */
+
+@media (max-width: 1259px) {
+    #scrollingintro {
+        height: 1350vh;
+    }
+    #arrow.visible {
+        width:28px;
+        margin-top: -20px;
+    }
+    
+    .smallCaps-intro, .smallCaps {
+        font-size: 0.8rem;
+        letter-spacing: 0.2rem;
+    }
+    /* Scrolling blocks: horizontal positions
+    ----------------------------------------- */
+    #scrolltext {
+        margin-left: 50px;
+        padding-top: 20px; 
+    }
+    
+    #block1 {
+        width: 390px;
+    }
+
+    #block2, #block4, #block6 {
+        width: 310px;
+    }
+
+    #block3 {
+        width: 345px;
+    }
+
+    #block5 {
+        width: 330px;
+    }
+
+    #block7 {
+        width: 315px;
+    }
+
+    #block8 {
+    }
+    /* Scrolling blocks: typography
+    ----------------------------------------- */
+    #logolarge {
+        font-size: 12rem;
+        /*padding-left: 10px;*/
+        text-align: left;
+    }
+    
+    h3 {
+        font-size: 0.8rem;
+        letter-spacing: 0.2rem;    
+    }
+    
+    #description {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        width: 250px;
+        text-align: left;
+        margin-left: 12px;
+    }
+    
+    #entersite  {
+        margin-left: 12px;
+        padding-top: 40px;
+    }
+    
+    #block1 {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        text-align: left;
+        font-family: 'latienne-pro';
+        font-weight: 500;
+        color: rgb(20,12,15);
+    }
+
+    #block2, #block3, #block4, #block5, #block6, #block7 {
+        font-size: 1.25rem;
+        line-height: 1.9rem;
+        display: block;
+        font-family: 'neuzeit-grotesk', serif;
+        font-weight: 300;
+        color: rgb(20,12,15); 
+    }
+    
+    #kerning {
+        letter-spacing: 0.4rem;
+    }
+
+    .pad-line {
+        padding-right:5px;
+    }
+
+    .quotation { 
+        font-size: 1.2rem;    
+    }
+
+    .quotation.new-line {      
+        text-indent: -0.6em;    
+    }
+
+    .new-line-right { 
+        padding-right:10px;     
+    }
+
+    .space-right {
+        padding-right: 10px;    
+    }
+    
+    /* Vertical optical margin adjustments
+----------------------------------------- */
+
+    #block1 {
+        margin-top: -5.5%;
+    }
+
+    #block2 {
+        margin-top: -3.5%;
+    }
+
+    #block3 {
+        margin-top: -4%;
+    }
+
+    #block4 {
+        margin-top: -4.5%;
+    }
+
+    #block5 {
+        margin-top: -2%;
+    }
+
+    #block6 {
+        margin-top: -11.5%;
+    }
+
+    #block7 {
+        margin-top: -3%;
+    }
+
+    #block8 {
+      margin-top: 3%;  
+    }
+}
+
+/* S: 1260px-1499px (LAPTOP SIZE)
+----------------------------------------- */
+
+@media (min-width: 1260px) and (max-width: 1499px) {
+    #scrollingintro {
+        height: 1350vh;
+    }
+    #arrow.visible {
+        width:28px;
+        margin-top: -20px;
+    }
+    
+    .smallCaps-intro, .smallCaps {
+        font-size: 0.8rem;
+        letter-spacing: 0.2rem;
+    }
+    /* Scrolling blocks: horizontal positions
+    ----------------------------------------- */
+    #scrolltext {
+        margin-left: 50px;
+        padding-top: 20px; 
+    }
+    
+    #block1 {
+        width: 390px;
+    }
+
+    #block2, #block4, #block6 {
+        width: 310px;
+    }
+
+    #block3 {
+        width: 345px;
+    }
+
+    #block5 {
+        width: 330px;
+    }
+
+    #block7 {
+        width: 315px;
+    }
+
+    #block8 {
+    }
+    /* Scrolling blocks: typography
+    ----------------------------------------- */
+    #logolarge {
+        font-size: 12rem;
+        /*padding-left: 10px;*/
+        text-align: left;
+    }
+    
+    h3 {
+        font-size: 0.8rem;
+        letter-spacing: 0.2rem;    
+    }
+    
+    #description {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        width: 250px;
+        text-align: left;
+        margin-left: 12px;
+    }
+    
+    #entersite  {
+        margin-left: 12px;
+        padding-top: 40px;
+    }
+    
+    #block1 {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        text-align: left;
+        font-family: 'latienne-pro';
+        font-weight: 500;
+        color: rgb(20,12,15);
+    }
+
+    #block2, #block3, #block4, #block5, #block6, #block7 {
+        font-size: 1.25rem;
+        line-height: 1.9rem;
+        display: block;
+        font-family: 'neuzeit-grotesk', serif;
+        font-weight: 300;
+        color: rgb(20,12,15); 
+    }
+    
+    #kerning {
+        letter-spacing: 0.4rem;
+    }
+
+    .pad-line {
+        padding-right:5px;
+    }
+
+    .quotation { 
+        font-size: 1.2rem;    
+    }
+
+    .quotation.new-line {      
+        text-indent: -0.6em;    
+    }
+
+    .new-line-right { 
+        padding-right:10px;     
+    }
+
+    .space-right {
+        padding-right: 10px;    
+    }
+    
+    /* Vertical optical margin adjustments
+----------------------------------------- */
+
+    #block1 {
+        margin-top: -5.5%;
+    }
+
+    #block2 {
+        margin-top: -3.5%;
+    }
+
+    #block3 {
+        margin-top: -3.5%;
+    }
+
+    #block4 {
+        margin-top: -4.5%;
+    }
+
+    #block5 {
+        margin-top: -3%;
+    }
+
+    #block6 {
+        margin-top: -8.5%;
+    }
+
+    #block7 {
+        margin-top: -3%;
+    }
+
+    #block8 {
+      margin-top: 0.25%;  
+    }
+}
+
+/* M: 1500px-2013px
+----------------------------------------- */
+
+@media (min-width: 1500px) and (max-width: 2013px) and (min-height: 700px) {
+    #scrollingintro {
+        height: 1350vh;
+    }
+    #arrow.visible {
+        width:28px;
+        margin-top: -24px;
+    }
+    
+    .smallCaps-intro, .smallCaps {
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+    }
+       /*  Scrolling blocks: horizontal positions
+    -----------------------------------------  */
+    #scrolltext {
+        margin-left: 50px;
+        padding-top: 20px; 
+    }
+    
+    #block1 {
+        width: 510px;
+    }
+
+    #block2, #block4, #block6 {
+        width: 450px;
+    }
+
+    #block3 {
+        width: 480px;
+    }
+
+    #block5 {
+        width: 480px;
+    }
+
+    #block7 {
+        width: 480px;
+    }
+
+    #block8 {
+    }
+    /* Scrolling blocks: typography
+    ----------------------------------------- */
+    #logolarge {
+        font-size: 20rem;
+        padding-left: 10px;
+        margin-bottom: 0;
+    }
+    
+    h3 {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;    
+    }
+    
+    #description {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        margin-bottom: 50px;
+        margin-top: -10px;
+        padding-left: 33px;
+        width: 400px;
+    }
+    
+    #entersite  {
+        margin-left:34px;
+        padding-top: 30px;
+    }
+    
+    #block1 {
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+        text-align: left;
+        font-family: 'latienne-pro';
+        font-weight: 500;
+        color: rgb(20,12,15);
+    }
+
+    #block2, #block3, #block4, #block5, #block6, #block7 {
+        font-size: 1.75rem;
+        line-height: 2.3rem;
+        display: block;
+        font-family: 'neuzeit-grotesk', serif;
+        font-weight: 300;
+        color: rgb(20,12,15); 
+    }
+    
+    #kerning {
+        letter-spacing: 0.4rem;
+    }
+
+    .pad-line {
+        padding-right:5px;
+    }
+
+    .quotation { 
+        font-size: 1.75rem;    
+    }
+
+    .quotation.new-line {      
+        text-indent: -0.6em;    
+    }
+
+    .new-line-right { 
+        padding-right:15px;     
+    }
+
+    .space-right {
+        padding-right: 15px;    
+    }
+    
+    /* Vertical optical margin adjustments
+----------------------------------------- */
+
+    #block1 {
+        margin-top: -4.5%;
+    }
+
+    #block2 {
+        margin-top: -2.5%;
+    }
+
+    #block3 {
+        margin-top: -2.5%;
+    }
+
+    #block4 {
+        margin-top: -3.5%;
+    }
+
+    #block5 {
+        margin-top: -2%;
+    }
+
+    #block6 {
+        margin-top: -7.5%;
+    }
+
+    #block7 {
+        margin-top: -2%;
+    }
+
+    #block8 {
+      margin-top: 0.25%;  
+    }
+}
+
+
+/* LG: 2014px-3000px (FULL IMAC SIZE)
+----------------------------------------- */
+
+@media (min-width: 2014px) {
+    #scrollingintro {
+        height: 1350vh;
+    }
+    #arrow.visible {
+        width:28px;
+        margin-top: -30px;
+    }
+    
+    .smallCaps-intro, .smallCaps {
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+    }
+    
+        /* Scrolling blocks: horizontal positions
+    ----------------------------------------- */
+    #scrolltext {
+        margin-left: 50px;
+        padding-top: 20px; 
+    }
+    
+    #block1 {
+        width: 580px;
+    }
+
+    #block2, #block4, #block6 {
+        width: 550px;
+    }
+
+    #block3 {
+        width: 600px;
+    }
+
+    #block5 {
+        width: 600px;
+    }
+
+    #block7 {
+        width: 530px;
+    }
+
+    #block8 {
+    }
+    /* Scrolling blocks: typography
+    ----------------------------------------- */
+    #logolarge {
+        font-size: 20rem;
+        padding-left: 10px;
+        margin-bottom: 0;
+    }
+    
+    h3 {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;    
+    }
+    
+    #description {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        margin-bottom: 50px;
+        margin-top: -10px;
+        padding-left: 33px;
+        width: 400px;
+    }
+    
+    #entersite  {
+        margin-left:34px;
+        padding-top: 30px;
+    }
+    
+    #block1 {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        display: inline;
+        text-align: left;
+        font-family: 'latienne-pro';
+        font-weight: 500;
+        color: rgb(20,12,15);
+    }
+
+    #block2, #block3, #block4, #block5, #block6, #block7 {
+        font-size: 2.1rem;
+        line-height: 3.2rem;    
+        display: block;
+        font-family: 'neuzeit-grotesk', serif;
+        font-weight: 300;
+        color: rgb(20,12,15);   
+    }
+    
+    #kerning {
+        letter-spacing: 0.4rem;
+    }
+
+    .pad-line {
+        padding-right:5px;
+    }
+
+    .quotation { 
+        font-size: 2.1rem;    
+    }
+
+    .quotation.new-line {      
+        text-indent: -0.6em;    
+    }
+
+    .new-line-right { 
+        padding-right:17px;     
+    }
+
+    .space-right {
+        padding-right: 17px;    
+    }
+    
+    /* Vertical optical margin adjustments
+----------------------------------------- */
+
+    #block1 {
+        margin-top: -4.5%;
+    }
+
+    #block2 {
+        margin-top: -2.5%;
+    }
+
+    #block3 {
+        margin-top: -2.5%;
+    }
+
+    #block4 {
+        margin-top: -3.5%;
+    }
+
+    #block5 {
+        margin-top: -2%;
+    }
+
+    #block6 {
+        margin-top: -7%;
+    }
+
+    #block7 {
+        margin-top: -1.5%;
+    }
+
+    #block8 {
+      margin-top: 2.5%;  
+    }
+}
+/*----- end media queries -----*/
+
+
+/* Scrolling block typography
+----------------------------------------- */
+
+#block8 {
+    display: block;
+}
+
+#kerning {
+    letter-spacing: 0.4rem;
+}
+
+.pad-line {
+    padding-right:5px;
+}
+
+.quotation { 
+    font-family: 'latienne-pro';    
+    font-weight: 500;   
+}
+
+.quotation.new-line { 
+    display: inline-block;       
+}
+
+.new-line-right { 
+    display: inline-block;   
+}
+
+.space-right {
+    display: inline-block;    
+}
+
+#logolarge {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    text-align: left;  
+    color: rgb(20,12,15);
+}
+
+#description {
+    font-family: 'latienne-pro';  
+    font-weight: 400;
+    color: rgb(20,12,15);
+    text-align:left;
+}
+
+#entersite {
+    text-align: left;
+}
+
+/* 
+----------------------------------------- */
+
+#credit {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    line-height: 1.4rem;
+}
+
+#intro {
+    position: relative;
+    text-align: center;
+}
+
+.button {
+    position: fixed;
+    top: 80%;
+    stroke: 1px solid rgb(91,55,70);
+    width: 10%;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    left: 45%;
+    right: 45%;
+}
+
+#feature {
+    font-family: "neuzeit-grotesk";
+    font-weight: 400;
+    font-size: 12rem;
+    text-align: center;
+}
+
+/* Scrolling block vertical measurements
+----------------------------------------- */
+
+/* Dynamic Scrolling Classes
+----------------------------------------- */
+
+#block1.top1 {
+    position: fixed;
+    top: 8%;
+}
+
+#block1.float1 {
+    position: absolute;
+    top:50%;
+}
+
+#block2.top2 {
+    position: fixed;
+    top: 45.45%;
+}
+
+#block2.float2 {
+    position: absolute;
+    top:150%;
+}
+
+#block2.go2 {
+    position: absolute;
+    top: 340.9%;
+}
+
+#block3.top3 {
+    position: fixed;
+    top: 54.54%;
+}
+
+#block3.float3 {
+    position: absolute;
+    top:250%;
+}
+
+#block3.go3 {
+    position: absolute;
+    top: 350%;
+}
+
+#block4.top4 {
+    position: fixed;
+    top: 45.45%;
+}
+
+#block4.float4 {
+    position: absolute;
+    top:450%;
+}
+
+#block4.go4 {
+    position: absolute;
+    top: 640.9%;
+}
+
+#block5.top5 {
+    position: fixed;
+    top: 54.54%;
+}
+
+#block5.float5 {
+    position: absolute;
+    top:550%;
+}
+
+#block5.go5 {
+    position: absolute;
+    top: 650%;
+}
+
+#block6.top6 {
+    position: fixed;
+    top: 45.45%;
+}
+
+#block6.float6 {
+    position: absolute;
+    top:750%;
+}
+
+#block6.go6 {
+    position: absolute;
+    top: 1081.8%;
+}
+
+#block7.top7 {
+    position: fixed;
+    top: 54.54%;
+}
+
+#block7.float7 {
+    position: absolute;
+    top:850%;
+}
+
+#block7.go7 {
+    position: absolute;
+    top: 1090.9%;
+}
+
+#block8.top8 {
+    position: fixed;
+    top: 63.63%;
+}
+
+#block8.float8 {
+    position: absolute;
+    top:950%;
+}
+
+#block8.go8 {
+    position: absolute;
+    top: 1100%;
+}
+
+#block9 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* Typography for 'Reading Tips', 'About', 'Index' and 'Reference' Pages 
+----------------------------------------------------------------------------------- */
+
+#icons {
+    position: relative;
+}
+
+#readingtips_container {
+    position: relative;
+}
+
+.about {
+column-count: 2;
+-webkit-column-count: 2; 
+-moz-column-count: 2; 
+column-gap: 30px; 
+-webkit-column-gap: 30px;
+-moz-column-gap: 30px; 
+}
+
+/* XS: 992px-1259px
+----------------------------------------- */
+
+@media (max-width: 1259px) {
+    #icons {
+        height: 160px;
+        padding-left: 56px;
+    }  
+    
+    #readingtips_container {
+        padding-left: 56px;
+    }
+}
+
+/* S: 1260px-1499px (LAPTOP SIZE)
+----------------------------------------- */
+
+@media (min-width: 1260px) and (max-width: 1499px) {
+    #icons {
+        height: 160px;
+        padding-left: 50px;
+    }
+    
+    #readingtips_container {
+        padding-left: 50px;
+    }
+}
+
+/* M: 1500px-2013px
+----------------------------------------- */
+
+@media (min-width: 1500px) and (max-width: 2013px) {
+    #icons {
+        height: 190px;
+        padding-left: 50px;
+    }
+
+    #readingtips_container {
+        padding-left: 50px;
+    }       
+}
+
+/* LG: 2014px-3000px (FULL IMAC SIZE)
+----------------------------------------- */
+
+@media (min-width: 2014px) {
+    #icons {
+        height: 190px;
+        padding-left: 0px;
+    } 
+    
+    #readingtips_container {
+        padding-left: 0px;
+    }
+}
+
+.instructions li {
+    display: inline-block;
+    width: 32%;
+    font-family: "neuzeit-grotesk";
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul.instructions {
+    width: 100%;
+    padding-left: 15px;
+    margin: 0px;
+    list-style: none;
+    text-align: left;
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+/* --------------- ABOUT PAGE ---------------- */
+
+/* XS: 992px-1259px
+----------------------------------------- */
+
+@media (max-width: 1259px) {
+    #breakpoint-two {
+        display: none;
+    }
+
+    #breakpoint-three {
+        display: none;
+    }
+    
+    #breakpoint-four {
+        display: none;
+    }   
+    
+    .p-break-about {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        margin-top: 20px;
+    } 
+}
+
+/* S: 1260px-1499px (LAPTOP SIZE)
+----------------------------------------- */
+
+@media (min-width: 1260px) and (max-width: 1499px) {
+    #breakpoint-one {
+        display: none;
+    }
+
+    #breakpoint-three {
+        display: none;
+    }
+    
+    #breakpoint-four {
+        display: none;
+    }       
+    
+     .p-break-about {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.7rem;
+        margin-top: 20px;
+    }     
+}
+
+/* M: 1500px-2013px
+----------------------------------------- */
+
+@media (min-width: 1500px) and (max-width: 2013px) {
+    #breakpoint-one {
+        display: none;
+    }
+
+    #breakpoint-two {
+        display: none;
+    }
+    
+    #breakpoint-four {
+        display: none;
+    } 
+     
+    .p-break-about {
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 2.3rem;
+        margin-top: 20px;
+    }
+}
+
+/* LG: 2014px-3000px (FULL IMAC SIZE)
+----------------------------------------- */
+
+@media (min-width: 2014px) {
+    #breakpoint-one {
+        display: none;
+    }
+
+    #breakpoint-two {
+        display: none;
+    }
+    
+    #breakpoint-three {
+        display: none;
+    }
+    
+    .p-break-about {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+        margin-top: 20px;
+    }
+    
+}
+
+/* -------------- INDEX PAGE --------------- */ 
+
+/* XS: 992px-1259px
+----------------------------------------- */
+
+@media (max-width: 1259px) {
+    /* ------ Headings ------- */ 
+    .p-break-subHead {
+        margin-top: 20px;
+        line-height: 40px;
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+    /* ------ Regular Copy ------- */ 
+    .p-break-2col {
+        margin-top: 20px;
+        line-height: 40px;
+        font-weight: 400;
+        font-size: 0.8rem;
+    } 
+    /* ------ Sml References ------- */ 
+    .p-break-sml {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 0.6rem;
+        line-height: 40px;
+    }
+    /* ------ Side Links (Numerals) ------- */ 
+    .sidelink {
+        line-height: 38px;
+    }
+    #sideNavCol {
+        padding-top: 3px;
+    }
+}
+
+/* S: 1260px-1499px (LAPTOP SIZE)
+----------------------------------------- */
+
+@media (min-width: 1260px) and (max-width: 1499px) {   
+    /* ------ Headings ------- */ 
+    .p-break-subHead {
+        margin-top: 20px;
+        line-height: 40px;
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+    /* ------ Regular Copy ------- */ 
+    .p-break-2col {
+        margin-top: 20px;
+        line-height: 40px;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    /* ------ Sml References ------- */ 
+    .p-break-sml {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 40px;
+    } 
+    /* ------ Side Links (Numerals) ------- */ 
+    .sidelink {
+        line-height: 39px;
+    }
+    #sideNavCol {
+        padding-top: 1px;
+    }   
+}
+
+/* M: 1500px-2013px
+----------------------------------------- */
+
+@media (min-width: 1500px) and (max-width: 2013px) {
+    /* ------ Headings ------- */ 
+    .p-break-subHead {
+        margin-top: 20px;
+        line-height: 40px;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    /* ------ Regular Copy ------- */ 
+    .p-break-2col {
+        margin-top: 20px;
+        line-height: 40px;
+        font-weight: 400;
+        font-size: 1.2rem;
+    } 
+    /* ------ Sml References ------- */ 
+    .p-break-sml {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 0.9rem;
+        line-height: 40px;
+    }  
+    /* ------ Side Links (Numerals) ------- */ 
+    .sidelink {
+        line-height: 38px;
+    }
+    #sideNavCol {
+        padding-top: 2px;
+    }       
+}
+
+/* LG: 2014px-3000px (FULL IMAC SIZE)
+----------------------------------------- */
+
+@media (min-width: 2014px) {
+    /* ------ Headings ------- */ 
+    .p-break-subHead {
+        margin-top: 20px;
+        line-height: 80px;
+        font-weight: 500;
+        font-size: 2.4rem;
+    }
+    /* ------ Regular Copy ------- */ 
+    .p-break-2col {
+        margin-top: 20px;
+        line-height: 60px;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+    /* ------ Sml References ------- */ 
+    .p-break-sml {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 60px;
+    } 
+    /* ------ Side Links (Numerals) ------- */ 
+    .sidelink {
+        line-height: 60px;    
+    }
+    #sideNavCol {
+        padding-top: 22px;
+    }  
+}
+
+/* ------ Misc ------- */ 
+
+.p-break-endline {
+    margin-top: 0px;
+    line-height: 40px;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.p-break-endline-sml {
+    margin-top: 0px;
+    line-height: 40px;
+    font-size: 0.8rem;
+}
+
+#p-break-last {
+    margin-top: 19px;
+}
+
+#about_subHead {
+    font-family: "latienne-pro";
+    font-weight: 500;
+}
+
+/* XS: 992px-1259px
+----------------------------------------- */
+
+@media (max-width: 1259px) {
+    #about_subHead {
+        font-size: 1.3rem; 
+        line-height: 2.1rem;
+    }    
+}
+
+/* S: 1260px-1499px (LAPTOP SIZE)
+----------------------------------------- */
+
+@media (min-width: 1260px) and (max-width: 1499px) {
+    #about_subHead {
+        font-size: 1.6rem; 
+        line-height: 2.3rem;
+    }
+
+}
+
+/* M: 1500px-2013px
+----------------------------------------- */
+
+@media (min-width: 1500px) and (max-width: 2013px) {
+    #about_subHead {
+        font-size: 2rem; 
+        line-height: 2.7rem;
+    }
+
+}
+
+/* LG: 2014px-3000px (FULL IMAC SIZE)
+----------------------------------------- */
+
+@media (min-width: 2014px) {
+    #about_subHead {
+        font-size: 2.4rem; 
+        line-height: 2.9rem;
+    }
+    
+}
+
+#p-break-first-4 {
+margin-top: 29px;
+}
+
+#p-break-first-3 {
+margin-top: 34px;
+}
+
+/* Media Queries (4 available screen sizes)
+----------------------------------------------------------------------------------- */
+
+/* XS: 992px-1259px
+----------------------------------------- */
+
+@media (max-width: 1259px) {
+    .references {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 1.15rem;
+    }
+}
+
+/* S: 1260px-1499px (LAPTOP SIZE)
+----------------------------------------- */
+
+@media (min-width: 1260px) and (max-width: 1499px) {
+    .references {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 1.15rem;
+    }
+}
+
+/* M: 1500px-2013px
+----------------------------------------- */
+
+@media (min-width: 1500px) and (max-width: 2013px) {
+    .references {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 1.15rem;
+    }
+}
+
+/* LG: 2014px-3000px (FULL IMAC SIZE)
+----------------------------------------- */
+
+@media (min-width: 2014px) {
+    .references {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 1.15rem;
+    }
+}
+
+#ref-spaced {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
+.ref-ital {
+    font-style: italic;
+}
+
+#textfiller {
+    opacity: 0;    
+}
+
+
+/* Hide Content if screen is too small
+----------------------------------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+	#screen-toosmall {
+    position: fixed;
+    /*top: 50%;*/
+    height: 100%;
+    /*transform: translateY(-60%);*/
+    width: 100%;
+    top: 0;
+    left: 0;    
+    z-index: 1000; 
+    background-color: rgb(237,228,223);   
+    }
+    
+    #screen-toosmall-type {
+        text-align: center;
+        font-family: "neuzeit-grotesk";
+        font-size: 1rem;
+        color: rgb(20,12,15);
+        width: 68%;
+        margin-left: 16%;
+    }
+    
+    #desktop-content {
+		display:none;
+	}
+}
+
+@media (max-height: 550px) {
+
+	#screen-toosmall {
+    position: fixed;
+    /*top: 50%;*/
+    height: 100%;
+    /*transform: translateY(-60%);*/
+    width: 100%;
+    top: 0;
+    left: 0;    
+    z-index: 1000; 
+    background-color: rgb(237,228,223);    
+    }
+    
+    #screen-toosmall-type {
+        text-align: center;
+        font-family: "neuzeit-grotesk";
+        font-size: 1rem;
+        color: rgb(20,12,15);
+        width: 68%;
+        margin-left: 16%;
+    }
+    
+    #desktop-content {
+		display:none;
+	}
+}
+
+@media (min-width: 992px) and (min-height: 551px) {
+	#screen-toosmall {
+		display: none;
+	}
+}
+
+/* Media Queries (4 available screen sizes)
+----------------------------------------------------------------------------------- */
+
+/* XS: 992px-1259px
+----------------------------------------- */
+
+@media (max-width: 1259px) {
+
+}
+
+/* S: 1260px-1499px (LAPTOP SIZE)
+----------------------------------------- */
+
+@media (min-width: 1260px) and (max-width: 1499px) {
+
+}
+
+/* M: 1500px-2013px
+----------------------------------------- */
+
+@media (min-width: 1500px) and (max-width: 2013px) {
+
+}
+
+/* LG: 2014px-3000px (FULL IMAC SIZE)
+----------------------------------------- */
+
+@media (min-width: 2014px) {
+
+}
